@@ -1,161 +1,184 @@
-# Patient Directory - Next.js Application
+# 🛍️ E-Commerce React App
 
-A comprehensive Dashbord Admin system built with React.js 18, javaScript, and TailwindCSS.
+A modern E-Commerce web application built with React, Redux Toolkit, TypeScript, and Tailwind CSS.
 
-## Features
+**Live Demo:** [https://fake-store-dashbord.vercel.app/](https://fake-store-dashbord.vercel.app/)  
+**GitHub Repository:** [https://github.com/OmarEmadSaad/FakeStore-Dashbord-.git](https://github.com/OmarEmadSaad/FakeStore-Dashbord-.git)
 
-- **Dual View Modes**: Switch between Dashbord , Add-Product
-- **Advanced Search**: Search across Product names
-- **Smart Filtering**: Filter by product title
-- **Pagination**: Efficient data loading with customizable page sizes
-- **Responsive Design**: Optimized for all device sizes
-- **Loading States**: Skeleton loaders for better user experience
-- **Error Handling**: Comprehensive error handling with user feedback
+---
 
-## Tech Stack
+## 🚀 Features
 
-- **Framework**: React.js 18
-- **Language**: javaScript
-- **Styling**: TailwindCSS
-- **UI Components**: Materila Taliwind
-- **Icons**: Lucide React
+### 🔐 Authentication
 
-## Project Structure
+- Login & Sign Up functionality
+- Authentication state managed with Redux Toolkit
+- Prevent adding products to cart without login
+- SweetAlert2 alerts for authentication actions
 
-Admin-System/
+### 🛒 Products
+
+- Fetch products from API
+- View product details
+- Add products to cart
+- Create new product page with validation
+
+### 🧺 Cart
+
+- Add / Remove products
+- Increase & Decrease quantity using + / - buttons
+- Smooth animation when removing items
+- Total price displayed below the table (centered)
+
+### ➕ Create Product Page
+
+- Fields:
+  - Title
+  - Description
+  - Price (positive numbers only)
+  - Category (fetched from `/products/categories`)
+  - Image URL
+- Full validation
+- Loading & error handling
+- Disabled submit button during submission
+- Success message after creation
+
+---
+
+## 🛠️ Tech Stack
+
+- React 18
+- TypeScript
+- Redux Toolkit
+- React Router v6
+- Tailwind CSS
+- Material Tailwind
+- SweetAlert2
+
+---
+
+## 📂 Project Structure
+
+# 🛍️ E-Commerce React App
+
+A modern E-Commerce web application built with React, Redux Toolkit, TypeScript, and Tailwind CSS.
+
+**Live Demo:** [https://fake-store-dashbord.vercel.app/](https://fake-store-dashbord.vercel.app/)  
+**GitHub Repository:** [https://github.com/OmarEmadSaad/FakeStore-Dashbord-.git](https://github.com/OmarEmadSaad/FakeStore-Dashbord-.git)
+
+---
+
+## 🚀 Features
+
+### 🔐 Authentication
+
+- Login & Sign Up functionality
+- Authentication state managed with Redux Toolkit
+- Prevent adding products to cart without login
+- SweetAlert2 alerts for authentication actions
+
+### 🛒 Products
+
+- Fetch products from API
+- View product details
+- Add products to cart
+- Create new product page with validation
+
+### 🧺 Cart
+
+- Add / Remove products
+- Increase & Decrease quantity using + / - buttons
+- Smooth animation when removing items
+- Total price displayed below the table (centered)
+
+### ➕ Create Product Page
+
+- Fields:
+  - Title
+  - Description
+  - Price (positive numbers only)
+  - Category (fetched from `/products/categories`)
+  - Image URL
+- Full validation
+- Loading & error handling
+- Disabled submit button during submission
+- Success message after creation
+
+---
+
+## 🛠️ Tech Stack
+
+- React 18
+- TypeScript
+- Redux Toolkit
+- React Router v6
+- Tailwind CSS
+- Material Tailwind
+- SweetAlert2
+
+---
+
+## 📂 Project Structure
+
+FakeStore-Dashbord/
 ├── public/
-│ ├── 404-Andromo-AI-Design-2
+│ └── assets/
 ├── src/
 │ ├── components/
-│ │ ├── admin
-│ │ │ └──product
-│ │ │ ├──AdminLayout.jsx
-│ │ │ ├──Dashbord.jsx
-│ │ │ └──ProtectedAdminRoute.jsx
-│ │ ├── Auth
-│ │ │ ├──Forbidden.jsx
-│ │ │ ├──Login.jsx
-│ │ └── Common
-│ │ │ ├──Loading.jsx
-│ │ │ ├──Pagination.jsx
-│ │ │ └──Requesterro.jsx
-│ │ └── Layout
-│ │ │ └── Header.js
-│ │ └── Page
-│ │ │ └── SearchPage.js
-│ │ └──Redux
-│ │ └──authSlice.js
-│ │ └──productSlice.js
-│ │ └──store.js
-│ └── App.jsx
-│ └── index.css
-│ └── main.jsx
-│ └── NotFound.jsx
+│ │ ├── admin/
+│ │ │ ├── AdminLayout.tsx
+│ │ │ ├── Dashboard.tsx
+│ │ │ └── ProtectedAdminRoute.tsx
+│ │ ├── auth/
+│ │ │ ├── Login.tsx
+│ │ │ └── SignUp.tsx
+│ │ ├── common/
+│ │ │ ├── Loader.tsx
+│ │ │ ├── Pagination.tsx
+│ │ │ └── RequestError.tsx
+│ │ ├── layout/
+│ │ │ └── Header.tsx
+│ │ └── page/
+│ │ └── SearchPage.tsx
+│ ├── redux/
+│ │ ├── authSlice.ts
+│ │ ├── productSlice.ts
+│ │ └── store.ts
+│ ├── App.tsx
+│ ├── index.css
+│ ├── main.tsx
+│ └── NotFound.tsx
 ├── .gitignore
 ├── db.json
-├── eslint.config.js
 ├── index.html
-├── package-lock.json
 ├── package.json
+├── package-lock.json
 ├── postcss.config.js
-├── README.md
 ├── tailwind.config.js
-├── vercel.json
-└── eslint.config.js
+└── README.md
 
-# Getting Started
+---
 
-1. **Install dependencies**:
+Products
+GET /products - Fetch all products
+GET /products/:id - Fetch single product details
+POST /products - Create a new product (Admin only)
+GET /products/categories - Fetch product categories
 
-   ```bash
-   npm install
-   ```
+Users
+GET /users - Fetch all users
+POST /users - Create a new user
 
-2. **Run the development server**:
+Cart
+Local cart management via Redux Toolkit (linked to logged-in user)
 
-   ```bash
-   npm run dev
-   ```
+---
 
-   3. **Run the backend server**:
-
-   ```bash
-    json-server --watch db.json --port 5000
-   ```
-
-3. **Open your browser**:
-   [http://localhost:5173] , [http://localhost:5000/users] -----db.json
-
-**Response:**
-
-## API Endpoints
-
-### GET
-
-```json
-{
-  "user": [...],
-  "user": {
-   {
-      "id": 1,
-      "name": "admin",
-      "username": "admin",
-      "password": "admin123",
-      "role": "admin"
-    },
-    {...}
-  }
-}
-```
-
-### Responsive Design
-
-- Mobile-first approach
-- Adaptive grid layouts
-- Touch-friendly interface elements
-
-## Features in Detail
-
-### Search Functionality
-
-- Real-time search with 300ms debouncing
-- Searches across Product name and filtering
-
-## Deployment
-
-The application is configured for static export and can be deployed to:
-
-- github
-
-Build command:
+## 📦 Installation
 
 ```bash
-npm run build
+git clone https://github.com/OmarEmadSaad/FakeStore-Dashbord-.git
+cd FakeStore-Dashbord
+npm install
+npm run dev
 ```
-
-## Performance Optimizations
-
-- Debounced search to reduce API calls
-- Pagination to limit data transfer
-- Skeleton loading states
-- Optimized re-renders with React hooks
-- Static export for faster loading
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License.
