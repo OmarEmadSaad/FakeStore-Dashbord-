@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pagination-div {
+  gap: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.hight {
+  height: 100vh;
+}
+.Title {
+  color: red;
+}
+.Space-long {
+  gap: 0.5em;
+}
+.space {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.from {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3f4f6;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
