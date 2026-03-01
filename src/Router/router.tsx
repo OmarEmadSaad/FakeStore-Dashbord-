@@ -1,7 +1,6 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 
 import { Navbar } from "../components/Layout/Navbar";
-import { Footer } from "../components/Layout/Footer";
 import { ProductsPage } from "../pages/ProductsPage";
 import { ProductDetailsPage } from "../pages/ProductDetailsPage";
 import { AuthPage } from "../pages/AuthPage";
@@ -13,7 +12,6 @@ const Layout = () => (
   <>
     <Navbar />
     <Outlet />
-    <Footer />
   </>
 );
 

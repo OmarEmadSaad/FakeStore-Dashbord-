@@ -5,7 +5,7 @@ import { useAppDispatch } from "../../hooks/useAppDispatch";
 import { addToCart } from "../../features/cart/cartSlice";
 import { useAppSelector } from "../../hooks/useAppSelector";
 import { useMemo } from "react";
-import Swal from "sweetalert2"; // استيراد SweetAlert2
+import Swal from "sweetalert2";
 
 interface Props {
   products: Product[];
@@ -40,10 +40,8 @@ export const ProductsTable = ({
     startIndex + itemsPerPage,
   );
 
-  // دالة التعامل مع إضافة المنتج للعربة
   const handleAddToCart = (product: Product) => {
     if (!isAuthenticated) {
-      // إذا لم يكن مسجل دخول، أظهر التنبيه
       Swal.fire({
         title: "Login Required!",
         text: "You must be logged in to add products to your cart.",

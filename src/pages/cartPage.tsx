@@ -167,7 +167,6 @@ export const CartPage = () => {
                       </div>
                     </td>
 
-                    {/* Remove */}
                     <td className="p-4 text-center">
                       <Button
                         size="sm"
@@ -208,7 +207,6 @@ export const CartPage = () => {
         </table>
       </Card>
 
-      {/* Checkout Section */}
       {cartItems.length > 0 && (
         <div className="mt-10 flex flex-col items-end gap-4 p-6 bg-white rounded-xl border border-blue-gray-50 shadow-sm">
           <div className="flex gap-20 items-center justify-center">
